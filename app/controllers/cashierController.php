@@ -7,6 +7,7 @@
 
         //METODO REGISTAR CAJA
         public function regisCajCon(){
+            return "caja";
         }
 
 
