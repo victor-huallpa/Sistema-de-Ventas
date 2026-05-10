@@ -224,4 +224,25 @@
             return $select;
 
         }
+
+        //METODO GENERAR CODIGO ALEATORIOS
+        protected function genCodAl($long, $corr){
+            $codi="";
+            $carac="Letra";
+
+            for($i=1; $i<=$long; $i++){
+                if($carac=="Letra"){
+                    $letra_alea=chr(rand(ord("a"),ord("z")));
+                    $letra_alea=strtoupper($letra_alea);
+                    $codi.=$letra_alea;
+                    $carac="Numero";
+                }else{
+                    $num_alea=rand(0,9);
+                    $codi.=$num_alea;
+                    $carac="Letra";
+                }
+            }
+
+            return $codi."-".$corr;
+        }
     }
