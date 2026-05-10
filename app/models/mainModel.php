@@ -93,6 +93,7 @@
 
         //Metodo SELECCIONAR datos
         public function selDa($ti, $ta, $cam, $id){
+            $sql='';
             $ti=$this->limCade($ti);
             $ta=$this->limCade($ta);
             $cam=$this->limCade($cam);
