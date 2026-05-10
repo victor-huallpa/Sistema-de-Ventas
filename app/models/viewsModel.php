@@ -6,7 +6,7 @@
         /* MOdelo para obtener las vista */
 
         protected function obtVisMo($vista){
-            $lisBlan= ["dashboard"];
+            $lisBlan= ["dashboard","userNew","userList","userUpdate","userPhoto"];
 
             if (in_array($vista,$lisBlan)) {
                 if (is_file("app/views/content/".$vista."-view.php")) {
