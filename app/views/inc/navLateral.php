@@ -81,7 +81,7 @@
                     </a>
                     <ul class="full-width menu-principal sub-menu-options">
                         <li class="full-width">
-                            <a href="#" class="full-width">
+                            <a href="<?php echo APP_URL?>userNew/" class="full-width">
                                 <div class="navLateral-body-cl">
                                     <i class="fas fa-cash-register fa-fw"></i>
                                 </div>
@@ -91,7 +91,7 @@
                             </a>
                         </li>
                         <li class="full-width">
-                            <a href="#" class="full-width">
+                            <a href="<?php echo APP_URL?>userList/" class="full-width">
                                 <div class="navLateral-body-cl">
                                     <i class="fas fa-clipboard-list fa-fw"></i>
                                 </div>
@@ -317,7 +317,7 @@
                             </a>
                         </li>
                         <li class="full-width">
-                            <a href="#" class="full-width">
+                            <a href="<?php echo APP_URL?>userUpdate/" class="full-width">
                                 <div class="navLateral-body-cl">
                                     <i class="fas fa-user-tie fa-fw"></i>
                                 </div>
@@ -327,7 +327,7 @@
                             </a>
                         </li>
                         <li class="full-width">
-                            <a href="#" class="full-width">
+                            <a href="<?php echo APP_URL?>userPhoto/" class="full-width">
                                 <div class="navLateral-body-cl">
                                     <i class="fas fa-camera"></i>
                                 </div>
