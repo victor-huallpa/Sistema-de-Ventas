@@ -5,7 +5,9 @@
 
     class userController extends mainModel{
 
-        
+        //METODO REGISTAR USUARIO
+        public function regisUsuCon(){
+        }
 
 
     }
