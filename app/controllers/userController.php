@@ -7,6 +7,7 @@
 
         //METODO REGISTAR USUARIO
         public function regisUsuCon(){
+            return "exho";
         }
 
 
