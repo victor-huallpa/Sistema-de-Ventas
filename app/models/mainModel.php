@@ -109,7 +109,7 @@
             return $sql;
         }
 
-        //METODO APRA ACTUALIZAR 9UPDATE)
+        //METODO APRA ACTUALIZAR UPDATE)
         protected function actuaDa($ta, $da, $condi){
 
             $query="UPDATE {$ta} SET ";
@@ -130,5 +130,19 @@
             $sql->exec($query);
             return $sql;
             //UPDATE table SET campo='valor', campo='valor' WHERE campo='valor'
+        }
+
+        //metdo eliminar registro
+        protected function eliRegis($ta, $cam, $id){
+        
+            $query="DELETE FROM {$ta}, WHERE {$cam}='{$id}'";
+
+            $sql=$this->conect();
+            $sql->beginTransaction();
+            $sql->prepare($query);//ebita inyeccion sql
+
+            $sql->exec($query);
+            return $sql;
+
         }
     }
