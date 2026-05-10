@@ -145,4 +145,57 @@
             return $sql;
 
         }
+
+
+        //PAGINADOR DE TABLAS
+        protected function pagiTa($pa, $numPa, $url, $bot){
+
+            $ta='<nav class="pagination is-centered is-rounded" role="navigation" aria-label="pagination">';
+            
+            if ($pa<=1) {
+                $ta.='
+                <a class="pagination-previous is-disabled" disabled ><i class="fas fa-arrow-alt-circle-left"></i> &nbsp; Anterior</a>
+                <ul class="pagination-list">
+                ';
+            } else {
+                $ta.='
+                <a class="pagination-previous" href="'.$url.($pa-1).'/"><i class="fas fa-arrow-alt-circle-left"></i> &nbsp; Anterior</a>
+                <ul class="pagination-list">
+                    <li><a class="pagination-link" href="'.$url.'1/">1</a></li>
+	                <li><span class="pagination-ellipsis">&hellip;</span></li>
+                ';
+            }
+
+            $ci=0;
+            for($i=$pa; $i<=$numPa; $i++){
+
+                if($ci>=$bot){
+                    break;
+                }
+
+                if($pa==$i){
+                    $ta.='<li><a class="pagination-link is-current" href="'.$url.$i.'/">'.$i.'</a></li>';
+                }else{
+                    $ta.='<li><a class="pagination-link" href="'.$url.$i.'/">'.$i.'</a></li>';
+                }
+
+                $ci++;
+            }
+
+            if($pa==$numPa){
+                $ta.='
+                </ul>
+                <a class="pagination-next is-disabled" disabled ><i class="fas fa-arrow-alt-circle-right"></i> &nbsp; Siguiente</a>
+                ';
+            }else{
+                $ta.='
+                    <li><span class="pagination-ellipsis">&hellip;</span></li>
+	                <li><a class="pagination-link" href="'.$url.$numPa.'/">'.$numPa.'</a></li>
+                </ul>
+                <a class="pagination-next" href="'.$url.($pa+1).'/"><i class="fas fa-arrow-alt-circle-right"></i> &nbsp; Siguiente</a>
+                ';
+            }
+            
+            $ta.='</nav>';
+        }
     }
