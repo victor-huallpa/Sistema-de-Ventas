@@ -198,4 +198,30 @@
             
             $ta.='</nav>';
         }
+
+        //METODO GENERAR SELECT
+        public function genSel($da, $camDB){
+            $check_se='';
+            $text_se='';
+            $count_se='';
+            $select='';
+
+            foreach($da as $row){
+
+                if ($camDB==$row) {
+                    $check_se='selected=""';
+                    $text_se='Actual';
+                }
+
+                $select.='<option values="'.$row.'" '.$check_se.'>'.$count_se.' - '.$row.$text_se.'</option>';
+
+
+                $check_se='';
+                $text_se='';
+                $count_se='';
+            }
+
+            return $select;
+
+        }
     }
