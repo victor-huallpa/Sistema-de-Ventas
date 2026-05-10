@@ -218,7 +218,7 @@
 
                 $check_se='';
                 $text_se='';
-                $count_se='';
+                $count_se++;
             }
 
             return $select;
