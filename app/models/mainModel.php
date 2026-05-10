@@ -255,4 +255,15 @@
             }
             
         }
+
+        //METODO VERIFICAR FECHAS
+        public function veriFe($fech){
+            $vals=explode('-',$fech);
+            if (count($vals)==3 && checkdate($vals[1], $vals[2], $vals[0])) {
+                return false;
+            } else {
+                return true;
+            }
+            
+        }
     }
