@@ -245,4 +245,14 @@
 
             return $codi."-".$corr;
         }
+
+        // METODO LIMITAR CADENA DE TEXTO
+        public function limICade($cade, $lim, $suf){
+            if (strlen($cade)>$lim) {
+                return substr($cade,0,$lim).$suf;
+            } else {
+                return $cade;
+            }
+            
+        }
     }
