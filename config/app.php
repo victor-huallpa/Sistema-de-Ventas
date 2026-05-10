@@ -15,7 +15,6 @@
     const MONEDA_SEPARADOR_MILLAR=",";
     const MONEDA_SEPARADOR_DECIMAL=".";
     //constantes de campos obligatorios
-    const CAMPO_OBLIGATORIO='&nbsp; <i class="fas-fa-edit"></i> &nbsp;';
-
+    const CAMPO_OBLIGATORIO='&nbsp; <i class="fas fa-edit"></i> &nbsp;';
     //cosntante de zona horaria
     date_default_timezone_set("America/Lima");
